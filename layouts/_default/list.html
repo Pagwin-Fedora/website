@@ -9,7 +9,8 @@
                     {{ range .Pages }}
                         <li>
                             <time class="li-article-date">{{ .Date.Format "January, 2, 2006" }}</time>
-                            <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+                            <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+                            <p>{{ .Description }}</p>
                         </li>
                     {{ end }}
                 </ul>

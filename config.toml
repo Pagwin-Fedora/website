@@ -7,11 +7,14 @@ theme = "liquorice"
     author = "Pagwin"
 
 [menu]
-  [[menu.main]]
-    identifier = "blog"
-    name = "blog"
-    url = "/blog/"
-
+    [[menu.main]]
+        identifier = "blog"
+        name = "blog"
+        url = "/blog/"
+    [[menu.main]]
+        identifier = "github"
+        name = "github"
+        url = "https://github.com/Pagwin-Fedora"
   [[comment.menu.main]]
     name = "getting started"
     post = "<span class='alert'>New!</span>"
