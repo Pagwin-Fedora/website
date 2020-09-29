@@ -1,0 +1,6 @@
+baseURL = "https://pagwin.xyz"
+languageCode = "en-us"
+title = "Pagwin's website"
+theme = "liquorice"
+[params]
+    author = "Pagwin"
