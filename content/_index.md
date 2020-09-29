@@ -1,5 +1,4 @@
 ---
 title: "Pagwin's website"
-icon: "asdf.ico"
 ---
-# testing
+Hi this is my website, not quite sure what to do with it quite yet but for now it exists

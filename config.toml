@@ -2,5 +2,19 @@ baseURL = "https://pagwin.xyz"
 languageCode = "en-us"
 title = "Pagwin's website"
 theme = "liquorice"
+
 [params]
     author = "Pagwin"
+
+[menu]
+  [[menu.main]]
+    identifier = "blog"
+    name = "blog"
+    url = "/blog/"
+
+  [[comment.menu.main]]
+    name = "getting started"
+    post = "<span class='alert'>New!</span>"
+    pre = "<i class='fa fa-road'></i>"
+    url = "/getting-started/"
+    weight = -100
