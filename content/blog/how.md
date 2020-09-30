@@ -1,7 +1,17 @@
 ---
 title: "How this website was made"
 description: "It's with hugo and the rest of this is probably gonna be short and boring viewer discretion is advised"
-date: 2020-09-29
+date: 2020-09-30
 ---
 ## Prelude
-Before we get to how I actually made this site let's discussed how I failed to make this site(repeatedly). I was inspired to make a simple website/blog from [this blog post](https://k1ss.org/blog/20191004a)
+Before we get to how I actually made this site let's discussed how I failed to make this site(repeatedly). I was inspired to make a simple website/blog from [this blog post](https://k1ss.org/blog/20191004a), I rapidly regretted having that as my main inspiration. I tried setting up scripts for generating pages using the output from pandoc, making the pages look nice and what not as well as make a script for generating an rss feed but rapidly realized that all of this was going to be a pain and gave up. Rinse and repeat a couple of times over several months to a year or so. 
+
+## Actually making this website
+One day(2 days before this post was written actually) I was browsing reddit when I came across [this comment](https://www.reddit.com/r/linuxquestions/comments/j0wcfj/i_hand_you_a_computer_with_a_minimalistic_install/g6vxxxj/) and realized that I'm an idiot because static site generators exist and what I had previously been doing was basically writing my own, I may still write my own but more so as a project on it's own than as something that's contributing to something else. After that work went relatively smoothly with me spending the first day learning what the fuck hugo(no I didn't do my research into static site generators don't judge me okay) is then on the second day I actually started to get into writing all the stuff for the site. For my theme as you may already know if you've looked at the footer for this website I'm using liquorice as my theme. I chose it for being simple, very nice for reading text(what I expect will be the main thing that's done on this website) and because I just liked the overall feel. There were some aspects that I felt the need to improve though such as the homepage being a bit more than just a list of every page on the site, something about lists(I don't remember what), making the subsections of these blogs and other pages in the future jump points in case I write something that would actually benefit from those jump points and not just a short one page piece and finally making the links actually look visually distinct from the text beyond simply being bold. There are probably other changes I'm forgetting and in the future I expect I'll tweak this further but that's all for now. Some of those tweaks will be me making the website smaller and more compressed following the original spirit of that kiss blog and I can already see some points where I can shave some size off but that's a story for another time.
+
+## Making the jump points
+most of those points are pretty easy if you read hugo's documentation and are willing to try random things but the jump points are a slight challenge and something worth writing about in more detail. First things first ignoring all this being generated from markdown causing some oddities how do we make a jump point on a webpage? Well with anchor tags of course!
+```html
+<a name="some_name_or_something_idk" href="./#some_name_or_something_idk">some content doesn't matter</a>
+```
+this is nice now if somebody goes to thesite.com/#some_name_or_something_idk their browser will jump them straight down to wherever that anchor tag is(talk about how this doesn't jump when clicked and then go into oddities due to the markdown generation being done by hugo)
