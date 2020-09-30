@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="{{ .Site.BaseURL }}/libraries/normalize.3.0.1.css" />
         <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/liquorice.css" />
         {{ cond (eq .Page.Kind "page") (safeHTML (printf "<link rel='stylesheet' href='%s/css/single.css'>" .Site.BaseURL)) "" }}
-        <link rel="icon" href="{{ .Site.BaseURL }}/icon.png" />
+        <link rel="icon" href="{{ .Site.BaseURL }}/img/icon.png" />
         <meta property="og:title" content="{{ .Title }}"/>
         <meta property="og:type" content="website"/>
         <meta property="og:url" content="{{ .Permalink }}"/>
