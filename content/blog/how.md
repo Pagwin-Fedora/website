@@ -14,4 +14,30 @@ most of those points are pretty easy if you read hugo's documentation and are wi
 ```html
 <a name="some_name_or_something_idk" href="./#some_name_or_something_idk">some content doesn't matter</a>
 ```
-this is nice now if somebody goes to thesite.com/#some_name_or_something_idk their browser will jump them straight down to wherever that anchor tag is(talk about how this doesn't jump when clicked and then go into oddities due to the markdown generation being done by hugo)
+this is nice now if somebody goes to example.com/#some_name_or_something_idk their browser will jump them straight down to wherever that anchor tag is. But it doesn't jump to the anchorblock when we click on it it simply sets our url and if we reload it jumps to it. *Editor's note: as I write this I'm unsure if I'm an idiot who didn't need to do the work with this javascript I'm about to talk about so it may well be possible that it's unnecessary and the above code already does that*. So in order to fix that we'll be adding an event to our anchor element like this.
+```html
+<a name="name" href="./#name" id="name">some text</a>
+<script>
+    let elem = document.getElementById("name");
+    elem.addEventListener(event=>{
+	    event.target.scrollIntoView();
+    });
+</script>
+```
+Technically the event could be added by adding an onclick parameter to the anchor element in the dom but we we start dealing with another problem which I'll get to after explaining this it'll be way cleaner to just use `addEventListener` anyway the code is relatively self explanatory but I'll explain it anyways. Our element has an id that we attached to it by adding the parameter `id="name"` we can get our element in our code by asking the browser to give our element to us using the id as a reference to find the element with the method `document.getElementById`. We could totally just use `document.getElementsByName` and take the first element from that but I personally chose to add and use the id. With `addEventListener` we can attach a function that'll be called when an event fires in this case the click event for when the user clicks on the anchor element. The function in question take the event object given to it and takes out the dom element that was actually clicked on with the target property. We then scroll to that dom element with scrollIntoView. Now all we need to do is have it so that when we write out our header elements we just surround them with anchor elements and... wait.
+
+## We didn't write those header elements though
+Oh yeah we didn't write the header elements in the first place they're written in from whatever markdown generator that hugo uses. Well how do we handle this? There may be some way of changing how hugo generates html from the markdown but that sounds hard let's just write some javascript.
+```js
+let elems = document.getElementsByTagName("h2");
+for(let elem of elems){
+    elem.outerHTML = `<a name="${elem.innerText}" href="./#${elem.innerText}" id="${elem.innerText}"><h2>${elem.innerHTML}</h2></a>`;
+    document.getElementById(e.innerText).addEventListener('click', event=>{
+	    event.target.scrollIntoView();
+    });
+}
+```
+Ok so you already understand that last bit with the event listener and what not so allow me to explain the rest. `document.getElementsByTagName` is the same as `document.getElementById` except it gets more than one element and does it by their tag name. The for loop iterates through all the elements we just got and through each iteration we can refer to the element we're on by the variable `elem`. The parameter of `outerHTML` isn't used very often `innerHTML` and `innerText` are used more often because most people only want to control the text inside of a dom element but want to leave the outer tags untouched but in this case that's useful because we actually want to add anchor tags around our header tags which is what we do. Hooray the problem with the markdown generation not allowing fine enough control was solved. Now about adding that script in to do that work.
+
+## Adding the script in
+some failures ahead(write about fucking around with cond and the escaping html and how I couldn't find the right boolean statement to make the cond work correctly before stumbling upon the current solution)
