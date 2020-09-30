@@ -4,4 +4,4 @@ description: "It's with hugo and the rest of this is probably gonna be short and
 date: 2020-09-29
 ---
 ## Prelude
-before we get to how I actually made this site let's discussed how I failed to make this site(repeatedly)
+Before we get to how I actually made this site let's discussed how I failed to make this site(repeatedly). I was inspired to make a simple website/blog from [this blog post](https://k1ss.org/blog/20191004a)
