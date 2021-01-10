@@ -32,7 +32,7 @@ My gripe with plugins can be further subdivided into how plugins add attributes 
 ```typescript
 (this as any).once(...)
 ```
-I think I heard an angel die. Of course I personally don't blame the typescript problems on the developer because 1)they wrote this in javascript and mistakes can happen and 2) I don't know how I'd solve them so yeah.
+I think I heard an angel die. Of course I personally don't blame these typescript problems on the developer because 1)they wrote this in javascript and mistakes can happen and 2) I don't know how I'd solve them so yeah.
 ## minecraft-data
 this one's short, basically there isn't an easy way to get the type for the object you get when you provide your minecraft version to the `minecraft-data` module. There's probably a way(in fact I'm pretty confident that I'm being an idiot here) but I can't be bothered finding it
 ## conclusion
