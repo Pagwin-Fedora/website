@@ -21,3 +21,7 @@ theme = "liquorice"
     pre = "<i class='fa fa-road'></i>"
     url = "/getting-started/"
     weight = -100
+[markup]
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+        unsafe = true
