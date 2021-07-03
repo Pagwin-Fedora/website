@@ -1,6 +1,6 @@
 ---
 title: "A universal tutorial on the basics for every* programming language"
-description: "A tutorial tha covers all the basic concepts that procedural languages commonly have"
+description: "A tutorial that covers all the basic concepts that procedural languages commonly have"
 date: 2021-07-03
 draft: false
 ---
