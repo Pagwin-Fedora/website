@@ -15,12 +15,10 @@ theme = "liquorice"
         identifier = "github"
         name = "github"
         url = "https://github.com/Pagwin-Fedora"
-  [[comment.menu.main]]
-    name = "getting started"
-    post = "<span class='alert'>New!</span>"
-    pre = "<i class='fa fa-road'></i>"
-    url = "/getting-started/"
-    weight = -100
+    [[menu.main]]
+        identifier = "monies"
+        name = "gib monies"
+        url = "/monies/"
 [markup]
     [markup.goldmark]
         [markup.goldmark.renderer]
