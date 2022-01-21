@@ -55,10 +55,10 @@ with:
   key: ${{secrets.SSH_KEY}}
   script: rm -rf /var/www/pagwin.xyz/*
 ```
-And now we get to the comedic part of this blog post.
 
 ## Dealing With My Stupidity(and a private ssh key)
-* wrong file location
+The obvious act of stupidity if you paid attention to what I wrote is that I saved the file to `.github/website-publish.yml` instead of `.github/workflows/website-publish.yml`. Fixing that was pretty easy when I figured out what was going on. After that I then had to tweak the deploy step a bit to make rsync work properly. 
+✅ wrong file location
 * wrong source
 * wrong target
 * website user not specified
