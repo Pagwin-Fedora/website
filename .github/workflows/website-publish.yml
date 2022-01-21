@@ -1,0 +1,29 @@
+name: Website publish
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+          fetch-depth: 0
+      - name: Hugo Setup
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.91.2'
+      - name: Build
+        run: hugo --minify
+      - name: Deploy
+        uses: up9cloud/action-rsync@master
+        env:
+          HOST: pagwin.xyz
+          KEY: ${{secrets.SSH_KEY}}
+          TARGET: /var/www/pagwin.xyz/
+
