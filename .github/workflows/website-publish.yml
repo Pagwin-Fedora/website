@@ -24,6 +24,7 @@ jobs:
         uses: up9cloud/action-rsync@master
         env:
           HOST: pagwin.xyz
+          USER: website
           KEY: ${{secrets.SSH_KEY}}
           TARGET: /var/www/pagwin.xyz/
 
