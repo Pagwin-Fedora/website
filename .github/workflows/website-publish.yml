@@ -20,6 +20,13 @@ jobs:
           hugo-version: '0.91.2'
       - name: Build
         run: hugo --minify
+      - name: Clean
+        uses: appleboy/ssh-action@master
+        with:
+          host: pagwin.xyz
+          username: website
+          key: ${{secrets.SSH_KEY}}
+          script: rm -rf /var/www/pagwin.xyz/*
       - name: Deploy
         uses: up9cloud/action-rsync@master
         env:
