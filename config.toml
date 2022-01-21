@@ -15,10 +15,6 @@ theme = "liquorice"
         identifier = "github"
         name = "github"
         url = "https://github.com/Pagwin-Fedora"
-    [[menu.main]]
-        identifier = "monies"
-        name = "gib monies"
-        url = "/monies/"
 [markup]
     [markup.goldmark]
         [markup.goldmark.renderer]
