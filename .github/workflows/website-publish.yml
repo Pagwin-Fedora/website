@@ -27,5 +27,5 @@ jobs:
           USER: website
           KEY: ${{secrets.SSH_KEY}}
           SOURCE: ./public/*
-          TARGET: /var/www/pagwin.xyz/*
+          TARGET: /var/www/pagwin.xyz/
 
