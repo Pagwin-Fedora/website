@@ -4,9 +4,9 @@ title: "Setting up CD for this site"
 
 description: "How I setup Github actions to automatically update this site"
 
-date: 2022-01-20
+date: 2022-01-22
 
-draft: true
+draft: false
 
 ---
 
