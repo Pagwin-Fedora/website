@@ -14,16 +14,47 @@ So in [My last blog](https://pagwin.xyz/blog/gh_actions/), I briefly mentioned a
 
 ## What is Pogo?
 
-[Pogo](https://github.com/Pagwin-Fedora/Pogo) is a todo list I'm working on that I wanted to use as an excuse to learn how to use [Go](https://go.dev/) [Rust](https://www.rust-lang.org/)'s FFI, how to store and retrieve data with [SQL](https://en.wikipedia.org/wiki/SQL) queries/statements. how to make UI in [Dart](https://dart.dev/)/[Flutter](https://flutter.dev/) and how to write [Sphaghetti](https://www.goya.com/media/4173/creole-spaghetti.jpg?quality=80) in C++. I put it this all toegether with copious usage of FFI to connect the Rust, Go and [C++](https://en.wikipedia.org/wiki/C%2B%2B) for the backend and the dart/flutter for the frontend.
+[Pogo](https://github.com/Pagwin-Fedora/Pogo) is a todo list I'm working on that I wanted to use as an excuse to learn how to use 
+
+1. [Go](https://go.dev/)
+2. [Rust](https://www.rust-lang.org/)'s FFI
+3. how to store and retrieve data with [SQL](https://en.wikipedia.org/wiki/SQL) queries/statements
+3. how to make UI in [Dart](https://dart.dev/)/[Flutter](https://flutter.dev/) 
+4. and how to write [Sphaghetti](https://www.goya.com/media/4173/creole-spaghetti.jpg?quality=80) in C++
+
+I put it this all toegether with copious usage of FFI to connect the Rust, Go and [C++](https://en.wikipedia.org/wiki/C%2B%2B) for the backend and the dart/flutter for the frontend.
 
 ## Problems
 
-But recently I've decided that all of that is dumb and unnecessary. Mostly because my architecture slowly morphed into passing around strings and I realized that my setup is overly complicated for that. So instead of FFI and TCP spaghetti instead I'm going to have each component of the application of the frontend, middleware and backend all be separate executables of some kind or another.
+But recently I've decided that all of that is dumb and unnecessary. Initially it made sense to use the somewhat unwieldy FFI setup because the backend was going to take a struct instead of a string and structs cannot be passed via stdin. Once I realized how hard and unnecessary that was due to FFI things I dropped it. With that my architecture was just passing around strings and I realized that my setup is overly complicated for that. So instead of FFI and TCP spaghetti instead I'm going to have ~~subprocess spaghetti~~ each component of the application be separate executables of some kind or another.
 
 ## The New Architecture
 
-This description is going to suck so I recommend clicking off if you get bored. For my new architecture there will be 4 components, The init script, the frontend, the middleware and the backend. The original repo that held all the code will have it all removed as the frontend, middleware and backend are developed in separate repos which are had as git submodules in the main repo which will be where an init script and a build script will be held. The init script is a script that will be running as long as the application itself holding the frontend, middleware and backend as child processes. The frontend will accept user input and print it to stdout in a manner understood by the middleware and passing state changes given to it as Pogo messages by stdin to the user. The middleware will take messages from the frontend and parse them for the backend to understand and vice versa. In order to check functionality of the middleware to ensure it is passed messages from the end(s) it wants the init process will do a brief feature check of the middleware by running it with the --features cli option. The backend takes messages from stdin and does transforms to the db and accepts queries of it's current state printing out the state to stdout.
+This description is going to suck so I recommend clicking off if you get bored. For my new architecture there will be 4 components
+
+1. The init script
+2. The frontend
+3. the middleware 
+4. and The backend.
+
+The original repository that held all the code will have it all removed as the frontend, middleware and backend are developed in separate repositories which are had as git submodules in the main repository which will be where an init script and a build script will be held.
+
+### The init script
+
+The init script is a script that will be running as long as the application itself holding the frontend, middleware and backend as child processes. 
+
+### The frontend
+
+The frontend will accept user input and print it to stdout in a manner understood by the middleware and passing state changes given to it as Pogo messages by stdin to the user. 
+
+### The middleware
+
+The middleware will take messages from the frontend and parse them for the backend to understand and vice versa. In order to check functionality of the middleware to ensure it is passed messages from the end(s) it wants the init process will do a brief feature check of the middleware by running it with the --features cli option. 
+
+### The backend
+
+The backend takes messages from stdin and does transforms to the db and accepts queries of it's current state printing out the state to stdout.
 
 ## Conclusion
 
-I expected this blog to be longer but I realized as I started to write it that writing about what I had previously done with Pogo was boring because it was nothing interesting. As is the post was a bit painful to write and I suspect it's also painful to read. Note to self write about a project as interesting stuff comes up not to explain yourself.
+I expected this blog to be longer but I realized as I started to write it that writing about what I had previously done with Pogo was boring because it was nothing interesting. Well there is some interesting stuff in how I previously was working on Pogo but most of that is too tangential for a post on the project itself such as how bad C/C++ networking is, how good networking is with rust after I stopped being an idiot, doing battle with Go's sql library and stuff related to FFI. I may make a blog post or two on these topics in the future but I still need to learn more about them to do them justice. Overall the post was a bit painful to write and I suspect it's also painful to read. Note to self write about a project as interesting stuff comes up not to explain yourself.
