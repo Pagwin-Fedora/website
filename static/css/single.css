@@ -1,13 +1,13 @@
 h1{
     font-weight: bold;
 }
-p a{
+:not(h2) a{
     color:#00a;
 }
-p a:hover{
+:not(h2) a:hover{
     color:#00a;
     background:#bbb;
 }
-p a:visited{
+:not(h2) a:visited{
     color:#500;
 }
