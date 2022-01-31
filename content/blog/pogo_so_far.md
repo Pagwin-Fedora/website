@@ -4,9 +4,9 @@ title: "Pogo so far"
 
 description: "A summary of the work I've done on pogo so far and where I intend to go with it"
 
-date: 2022-01-01
+date: 2022-01-31
 
-draft: true
+draft: false
 
 ---
 
