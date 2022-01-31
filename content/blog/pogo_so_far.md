@@ -14,7 +14,7 @@ So in [My last blog](https://pagwin.xyz/blog/gh_actions/), I briefly mentioned a
 
 ## What is Pogo?
 
-[Pogo](https://github.com/Pagwin-Fedora/Pogo) is a todo list I'm working on that I wanted to use as an excuse to learn how to use 
+[Pogo](https://github.com/Pagwin-Fedora/Pogo) is a todo list I'm working on that I wanted to use as an excuse to learn 
 
 1. [Go](https://go.dev/)
 2. [Rust](https://www.rust-lang.org/)'s FFI
