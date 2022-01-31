@@ -1,13 +1,13 @@
 h1{
     font-weight: bold;
 }
-p a{
+p a, li a{
     color:#00a;
 }
-p a:hover{
+p a:hover, li a:hover{
     color:#00a;
     background:#bbb;
 }
-p a:visited{
+p a:visited, li a:visited{
     color:#500;
 }
