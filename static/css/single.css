@@ -1,16 +1,13 @@
 h1{
     font-weight: bold;
 }
-:not(h2) a{
+p a, li a{
     color:#00a;
 }
-:not(h2) a:hover{
+p a:hover, li a:hover{
     color:#00a;
     background:#bbb;
 }
-:not(h2) a:visited{
+p a:visited, li a:visited{
     color:#500;
-}
-a {
-    display: inline-block;
 }
