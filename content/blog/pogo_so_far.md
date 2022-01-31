@@ -49,7 +49,7 @@ The frontend will accept user input and print it to stdout in a manner understoo
 
 ### The middleware
 
-The middleware will take messages from the frontend and parse them for the backend to understand and vice versa. In order to check functionality of the middleware to ensure it is passed messages from the end(s) it wants the init process will do a brief feature check of the middleware by running it with the --features cli option. 
+The middleware will take messages from the frontend and parse them for the backend to understand and vice versa. In order to check functionality of the middleware to ensure it is passed messages from the end(s) it wants the init process will do a brief feature check of the middleware by running it with the `--features` cli option. 
 
 ### The backend
 
