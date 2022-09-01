@@ -6,7 +6,7 @@ description: "So recently I've begun work on trying to remove distractions so I'
 
 date: 2022-9-01
 
-draft: true
+draft: false
 
 ---
 
@@ -80,7 +80,7 @@ This last bit of code checks to see if there's a token for the next page of subs
 
 ## Why I specified but not really for getting the feeds
 
-As it turns out what I wanted could be better accomplished by self hosting an [Invidious](https://github.com/iv-org/invidious) instance. However my weird format that I had of my subs wouldn't work and I didn't want to redo filtering out channels I don't want so I decided to make a script that would make an opml file which is one of the file types that invidious could import. To do that I wrote a rust script.
+As it turns out what I wanted could be better accomplished by self-hosting an [Invidious](https://github.com/iv-org/invidious) instance. However, my weird format that I had of my subs wouldn't work and I didn't want to redo filtering out channels I don't want so I decided to make a script that would make an opml file which is one of the file types that invidious could import. To do that I wrote a rust script.
 ```rs
 use std::fs::File;
 use std::io::Read;
@@ -108,12 +108,12 @@ fn gen_middle(line:&str)->String{
 	format!("<outline text=\"{}\" title=\"{}\" type=\"rss\" xmlUrl=\"/feed/channel/{}\"/>",name,name,id)
 }
 ```
-tldr on that whole bunch of code is I have a constant string as the start of the file which gets output. Then there's a middle that's generated from the list of channels in that weird format the previous script generated such that every entry gets put into the template `<outline text=$channel_name title=$channel_name type="rss" xmlUrl="/feed/channel/$channel_id"/>"` and then all the channel entries are joined together. After that I put a constant value as the end to close everything up. Developing that script there was a bit of a hiccup where Invidious wouldn't take it because the channel name only had the first word due to me making an initial mistake which I eventually fixed.
+TLDR on that whole bunch of code is I have a constant string as the start of the file which gets output. Then there's a middle that's generated from the list of channels in that weird format the previous script generated such that every entry gets put into the template `<outline text=$channel_name title=$channel_name type="rss" xmlUrl="/feed/channel/$channel_id"/>"` and then all the channel entries are joined together. After that, I put a constant value at the end to close everything up. Developing that script there was a bit of a hiccup where Invidious wouldn't take it because the channel name only had the first word due to me making an initial mistake which I eventually fixed.
 
 ### Wait what about hosting an Invidious instance?
 
-Oh yeah I should probably summarize that process. I tweaked a config file in a couple of places so it fitted my particular use case. I added entries to my /etc/sites-enabled/ and my dns, then ran certbot. After that with a simple `docker-compose up -d` with the provided docker-compose.yml file and it worked without anything worth commenting on happening.
+Oh yeah, I should probably summarize that process. I tweaked a config file in a couple of places so it fitted my particular use case. I added entries to my /etc/sites-enabled/ and my DNS, then ran Certbot. After that with a simple `docker-compose up -d` with the provided docker-compose.yml file and it worked without anything worth commenting on happening.
 
 ## Conclusion
 
-So that was a lot of words to describe something that only took maybe 6 hours altoegether over a couple days. That said I hope to do a bit more to keep myself on task, specifically I want to setup a discord bot that will dm me the tasks that I have in google tasks(which is why I mentioned doing that youtube api automation end up saving me time) and notion every day and my larger goals each week. So that'll be an interesting short little project when I find the time. Then once that's done I can finally return to my little overengineered todo list [Pogo](/blog/pogo_so_far) where I scrapped the very small amount of code I wrote following the spec I wrote in a previous blog and will probably implement in Erlang instead. Though before any of that I need to make a blog post ranting about serenity and give into implementing a bad fix to a problem their api caused. But after all that I can continue work on that libvirt util in Lisp. Anyways with all of that rambling out of the way I wish the reader of this a nice day.
+So that was a lot of words to describe something that only took maybe 6 hours altogether over a couple of days. That said I hope to do a bit more to keep myself on task, specifically, I want to set up a discord bot that will dm me the tasks that I have in google tasks(which is why I mentioned doing that youtube api automation may end up saving me time) and notion every day and my larger goals each week. So that'll be an interesting short little project when I find the time. Then once that's done I can finally return to my little overengineered todo list [Pogo](/blog/pogo_so_far) where I scrapped the very small amount of code I wrote following the spec I wrote in a previous blog and will probably implement in Erlang instead. Though before any of that I need to make a blog post ranting about serenity and give into implementing a bad fix to a problem their api caused. But after all that I can continue work on that libvirt util in Lisp. Anyways with all of that rambling out of the way I wish the reader of this a nice day.
