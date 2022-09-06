@@ -2,7 +2,7 @@
 
 title: "Rust Match and Enums"
 
-description: "Literally a blog article I wrote to win a dumb argument"
+description: "A blog article I wrote to win a dumb argument"
 
 date: 2022-09-06
 
