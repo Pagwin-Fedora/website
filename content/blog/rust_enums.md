@@ -6,7 +6,7 @@ description: "Literally a blog article I wrote to win a dumb argument"
 
 date: 2022-09-06
 
-draft: true
+draft: false
 
 ---
 
