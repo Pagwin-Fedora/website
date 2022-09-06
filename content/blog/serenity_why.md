@@ -6,7 +6,7 @@ description: "A rant against how serenity forces the developer to handle state"
 
 date: 2022-09-01
 
-draft: true
+draft: false
 
 ---
 
