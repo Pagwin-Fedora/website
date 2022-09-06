@@ -34,13 +34,13 @@ But I haven't made any arguments for my position yet I've just specified how you
 //why a 128 bit integer and not just a 64 bit? Well because I wanted to show off that rust has that that's why
 enum OurEnum{InterviewQuestion(bool), FastFoodOrder(u128), Other(Box<dyn Display>)}
 fn anything(something:OurEnum)->String{
-   match OurEnum{
-        InterviewQuestion(true)=>{
-	    "fizz"
-        },
-	InterviewQuestion(false) => {
-	    "buzz"
-	}
+    match OurEnum{
+	    InterviewQuestion(true)=>{
+		    "fizz"
+	    },
+	    InterviewQuestion(false) => {
+		    "buzz"
+	    }
         FastFoodOrder(size_index) => {
             if size_index < 10 {
                 "smol"
@@ -88,15 +88,6 @@ So remember how I said we shouldn't use an interface for this but interfaces can
 ## Conclusion
 
 Accept it person I'm arguing with Rust enums are superior, if anyone complains about a lack of C Unions in Dart maybe consider suggesting Rust enums... or just copy [typescript's unions](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types) which is probably what these people are actually advocating for and tbh while technically inferior to rust enums has its own merits.
-
-## Is how I would've ended it
-
-But arguments/discussions aren't one sided like that and I chatted with the person shortly after writing this article and they made an interesting point.
-
-## If the type fits you should accept it
-This is a rebuke to my "Oh hey I implement your interface now, fuck you" and is simply asking how that's a problem. After all the interface should specify what you need from some data type to be able to use it in some application. This also moves the control flow of which code to run outside of the method taking in data. Combined with the idea that the interface setup can also give compiler errors where it makes sense the question has to be now be asked why are rust enums preferable?
-
-##,McDonald's?self-document,,,,issome datatypes mayits
 
 ## Is how I would've ended it
 
