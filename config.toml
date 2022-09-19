@@ -12,9 +12,19 @@ theme = "liquorice"
         name = "blog"
         url = "/blog/"
     [[menu.main]]
+	identifier = "links"
+	name = "links"
+	url = "/links/"
+    [[menu.main]]
+	parent = "links"
         identifier = "github"
         name = "github"
         url = "https://github.com/Pagwin-Fedora"
+    [[menu.main]]
+	parent = "links"
+        identifier = "linkedin"
+        name = "linkedin"
+        url = "https://www.linkedin.com/in/spencer-powell-pagwin/"
 [markup]
     [markup.goldmark]
         [markup.goldmark.renderer]
