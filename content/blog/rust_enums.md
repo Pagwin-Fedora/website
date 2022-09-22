@@ -14,13 +14,13 @@ As the description of this article says I wrote this to try and probably fail to
 ```dart
 String anything(Object something) {
     if(something is bool){
-	if(something) return "fizz";
-	return "buzz";
+	    if(something) return "fizz";
+	    return "buzz";
     }
     if(something is int){
-	if(something < 10) return "smol";
-	if(something < 20) return "Mcdonald's medium";
-	return "LARGE";
+	    if(something < 10) return "smol";
+	    if(something < 20) return "Mcdonald's medium";
+	    return "LARGE";
     }
     return "$something";
 }
