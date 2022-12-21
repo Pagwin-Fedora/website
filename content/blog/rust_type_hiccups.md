@@ -6,7 +6,7 @@ description: "A couple of hiccups I've run into with rust's type system"
 
 date: 2022-12-20
 
-draft: true
+draft: false
 
 ---
 
@@ -64,3 +64,7 @@ impl<const km1:i16, const sec1:i16,const kg1:i16,const km2:i16, const sec2:i16,c
 }
 ```
 and had I not run into my type hiccup Mul would've been implemented similarly and Add and Sub would've been trivial. Alas, rust doesn't allow this to compile because `cannot perform const operation using kg1` and so on for all the other const generics... what? What do you mean I can't do a const operation with a const wtf ~~I also got an error that said something about how an associated type wasn't allowed when I set Rhs but shhhhh~~. Yeah in the compiler I imagine that allowing for calculating const generics with values that are const/const generics is relatively easy so I hope that does get improved at some point.
+
+## Conclusion
+
+I like rust's type system and most of the time it does a pretty good job, however when it doesn't work it's annoying. These 2 examples being particularly unsatisfying because they're so natural but oh well hopefully rust is able to make them work in the future.
