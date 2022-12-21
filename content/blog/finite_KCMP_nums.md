@@ -84,7 +84,7 @@ Anyways back to the issue at hand we have a number(ψ) that should be in a set b
 
 > can you explain these statements?
 
-sure but I don't remember how much of this I thought up vs Micha so I can't give proper credit so if that's important to you you'll need to each out to me or Micha so we can share some discord messages.
+sure but I don't remember how much of this I thought up vs Micha so I can't give proper credit so if that's important to you you'll need to reach out to me or Micha so we can share some discord messages.
 
 ### ψ isn't in the set
 
