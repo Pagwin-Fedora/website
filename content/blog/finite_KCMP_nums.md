@@ -14,12 +14,14 @@ draft: true
 
 So this blog article exists because I have too much time and realized that numbers with a finite KCMP have an isomorphism to the natural numbers among some other interesting stuff and I wanna write a blog article about it.
 
-> Huh? KCMP? Natural numbers? Mapping? the fuck?
+> Huh? KCMP? Natural numbers? Isomorphism? the fuck?
 
 ## An initial explanation
 
 Okay maybe I should start with some explaining, KCMP is shorthand that me and a friend(their name is Micha, here's their [blog](https://lochalhost.pl/en/blog) and here's their [github](https://github.com/michalusio)) use when referring to [Kolmogorov complexity](https://en.wikipedia.org/wiki/Kolmogorov_complexity), Kolmogorov complexity is the term used to describe the length of the shortest program written in a turing complete language needed to calculate a particular value. From here on however I'm gonna write KCMP because that's shorter. If you've never heard of KCMP I don't blame you, until Micha brought the term to my attention I wasn't sure what I was thinking of had a word.
+
 > Wait you were thinking of KCMP before you even had a word for it?
+
 Yup, you see some months ago I started this journey with a relatively simple question "are there numbers which we can't calculate?". The answer is yes there are numbers that we cannot calculate ever these numbers are irrational numbers with infinite KCMP. For a while that was that but before we go on I should probably make sure you know what I mean by isomorphism and natural numbers.
 
 Natural numbers are the numbers you count with, `1,2,3,4,5,6,7,...` no fractions, no negatives or anything that you can't count with infinite fingers another way to describe them would be to just say they're all the positive integers.
