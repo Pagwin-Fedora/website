@@ -116,9 +116,11 @@ Stop poking holes in my fun math thoughts anyways with the knowledge that intege
 
 I hypothesize that all of the universal constants have infinite KCMP due to the universe being a continuum of possible universal constants across a multi-dimensional plane and the observable universe being just one point on that plane picked at random, due to it being picked at random the probability of it being all values with infinite KCMP is practically 100%. Do I have evidence, research or anything else backing this theory up? Nope but it's interesting.
 
-> how is that unfalsifiable?
+> Why is the probability practically 100% if the values are picked at random and How is that unfalsifiable?
 
-We'd need to be able to make infinitely precise measurements to confirm it one way or the other and things like plank's constant conspire to prevent this.
+The reason the probability is practically 100% is because the size of finite KCMP numbers is countably infinite and because the size of the real numbers is bigger that means that the set of numbers with infinite KCMP is the size of the real numbers thereby being infinitely bigger making the ratio comparable to 1:∞ meaning the probability of any universal constant having finite KCMP(assuming all are chosen fully randomly over a continuum) is 0(technically not impossible for math reasons but practically impossible).
+
+As for the question of unfalsifiability we'd need to be able to make infinitely precise measurements to confirm it one way or the other and things like plank's constant conspire to prevent this in addition to us doing anything infinitely is pretty difficult if it's possible at all.
 
 ## Conclusion
 
