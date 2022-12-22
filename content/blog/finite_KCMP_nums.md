@@ -120,7 +120,7 @@ I hypothesize that all of the universal constants have infinite KCMP due to the 
 
 The reason the probability is practically 100% is because the size of finite KCMP numbers is countably infinite and because the size of the real numbers is bigger that means that the set of numbers with infinite KCMP is the size of the real numbers thereby being infinitely bigger making the ratio comparable to 1:∞ meaning the probability of any universal constant having finite KCMP(assuming all are chosen fully randomly over a continuum) is 0(technically not impossible for math reasons but practically impossible).
 
-As for the question of unfalsifiability we'd need to be able to make infinitely precise measurements to confirm it one way or the other and things like plank's constant conspire to prevent this in addition to us doing anything infinitely is pretty difficult if it's possible at all.
+As for the question of unfalsifiability we'd need to be able to make infinitely precise measurements to confirm it one way or the other and things like plank's constant conspire to prevent this in addition to us measuring with an error margin of 0 is pretty difficult if it's possible at all.
 
 ## Conclusion
 
