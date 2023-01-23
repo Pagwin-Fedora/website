@@ -1,8 +1,8 @@
 ---
 
-title: "Finite KCMP numbers(because fuck it my brain has a bit too much free time)"
+title: "Finite KCMP numbers"
 
-description: "A couple of hiccups I've run into with rust's type system"
+description: "Fuck it my brain has a bit too much free time so why not figure out a proof for an isomorphism between programs writen in a turing complete language and natural numbers and use it to do fun stuff"
 
 date: 2022-12-20
 
@@ -42,7 +42,7 @@ The reason I got very confused then is because I could apply a [diagonalization 
 
 > How do you know this number should be in your set?
 
-for the sake of making this conversation easier lets give this number the name of ψ because ψ is underutilized in math. We know that ψ if it exists(we'll get to that) has finite KCMP because the process used to generate it given the set of all finite KCMP numbers only adds a finite amount of additional KCMP on top of the KCMP of the set of all numbers with finite KCMP which we know also has finite KCMP because we can describe the creation of that set with the following python program
+for the sake of making this conversation easier lets give this number the name of ψ because the symbol ψ is underutilized in math. We know that ψ if it exists(we'll get to that) has finite KCMP because the process used to generate it given the set of all finite KCMP numbers only adds a finite amount of additional KCMP on top of the KCMP of the set of all numbers with finite KCMP which we know also has finite KCMP because we can describe the creation of that set with the following python program
 ```py
 counter = 0
 finite_KCMP_set = set()
