@@ -2,15 +2,15 @@
 
 title: ""
 
-description: ""
+description: "I swear I'm going to finish it this time"
 
-date: 2022-12-20
+date: 2023-00-00
 
 draft: true
 
 ---
 
-# Another blog post that mentions Pogo(I swear I'm going to finish it this time)
+# Another blog post that mentions Pogo
 
 Welcome to another blog about pogo aka that todo list that I way over-engineered. Anyways I started over again but this time I swear I'm gonna finish it, I promise I won't throw it out again. Oh what have I done? I have the database setup and some method for interacting with the data inside which I'm 100% going to through out in favor of raw sql queries... Wait no I promise I'm doing good this time the only reason I'm probably not gonna use existing work is because I'm going to make the api able to give back data based on what's being requested and also have things be mostly stateless because that allows scaling and... Okay I might still be over-engineering this but at least the way I'm over-engineering it is by making it scale instead of making it a mess and annoying to work on. Anyways here's some explanation of what I've done so far.
 
@@ -85,6 +85,7 @@ pub trait TaskEncoder{
     async fn provide_identifiers(&mut self, login:&str)->Result<Vec<Self::Identifier>,Self::IdentityFetchError>;
 }
 ```
+Once that was done I just needed to implement it in SQL and the details involved in that made having the struct a bit more iffy. With that trait done I moved on to doing ~~your mom~~ the sql.
 
 ## Doing the sql(and remembering I need to store completion)
 
@@ -100,4 +101,11 @@ Now if you have any sql experience you'll probably understand why everything bec
 
 ## Making the backend api
 
-And now we get to why the struct
+So now we've explained the first possible end point for the task struct that point being just 1 row in the task table. But what about the one with all the Options or the argument that the task struct won't be a thing anymore? Well that's due to the rest inspired http api. While I haven't finished implementing it yet I think I'm done designing the stuff related to the task object it so here are the endpoints relating to tasks.
+```
+GET /task/$id
+PUT /task
+UPDATE /task/$id
+DELETE /task/$id
+```
+PUT just creates a task with everything set to default and gives back the uuid of that task and DELETE just deletes it. The ones which make things iffy are GET and UPDATE which both allow the client making a request to the api to only provide some of a task or for it to only update some of the task.
