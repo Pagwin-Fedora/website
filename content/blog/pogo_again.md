@@ -108,4 +108,4 @@ PUT /task
 UPDATE /task/$id
 DELETE /task/$id
 ```
-PUT just creates a task with everything set to default and gives back the uuid of that task and DELETE just deletes it. The ones which make things iffy are GET and UPDATE which both allow the client making a request to the api to only provide some of a task or for it to only update some of the task.
+PUT just creates a task with everything set to default and gives back the uuid of that task and DELETE just deletes it. The ones which make things iffy are GET and UPDATE which both allow the client making a request to the api to only provide some of a task or for it to only update some of the task. Due to data now being optional the original task struct didn't represent what endpoints would be delivering, what's more it wasn't needed for database queries due to SQL queries being decently flexible with me using direct SQL queries through [sqlx](https://crates.io/crates/sqlx).
