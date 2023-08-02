@@ -7,7 +7,7 @@ draft: false
 ## Prelude
 No this isn't comprehensive, so no you won't be able to immediately go start making something after having read this and no this doesn't cover everything you might possibly run into, see [#The Asterisk](#The%20Asterisk). Also the examples will be in Pseudocode so this isn't a generic python/javascript tutorial :P.
 
-## The Asterisks
+## The Asterisk
 If you didn't notice the asterisk in the title next to every, now you know there is one. The reason for that asterisk is that this blog only covers stuff that is common(as built in language features) in procedural programming. If you don't know what "procedural" means don't worry about it and pretend that this covers every programming language. 
 
 ## The Data
@@ -48,7 +48,7 @@ lists are a methodology of storing multiple data values within a single variable
 ```
 someList <- ["First item", "Second item", "meh item"]
 someList[2] <- "Third item"
-"First item should be when the line of code below is run"
+"First item should be displayed when the line of code below is run"
 DISPLAY(someList[0])
 ```
 ## Loops
@@ -57,12 +57,12 @@ loops are kinda self explanatory as they loop running code repeatedly. Commonly 
 i <- 0
 "initializing an empty list which will be filled with the while loop below"
 dataSet = []
-WHILE i<50 {
+WHILE i < 50 {
     dataSet[i] <- i + 1
 }
 "both loops below will display all the values in the list in the var dataSet"
 i <- 0
-while i<50 {
+WHILE i < 50 {
     DISPLAY(dataSet[i])
 }
 FOREACH n <- dataSet {
@@ -77,4 +77,4 @@ That should cover the basic syntax features someone trying to learn a procedural
 
 <a href="./#2" name="2">2</a> - most programming languages have certain specifications on what you can name your variables and there's also reccomended ways you should name your variables and both of these can vary per language so you should probably read their documentation for specifics but for my purposes I'm gonna stick to [camelCase](https://en.wikipedia.org/wiki/Camel_case) using only english letters as I'm unaware of any non-esoteric programing languages which disallow such naming
 
-<a href="./#3" name="3">3</a> - python will call foreach loops just for loops but most languages call them foreach loops
+<a href="./#3" name="3">3</a> - some programming languages will call foreach loops just for loops but most languages call them foreach loops
