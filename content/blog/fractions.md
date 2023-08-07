@@ -4,9 +4,9 @@ title: "Fractions"
 
 description: "So I've been thinking about representing fractions/rational numbers in binary effieciently..."
 
-date: 2023-08-04
+date: 2023-08-07
 
-draft: true
+draft: false
 
 ---
 
@@ -54,4 +54,12 @@ Amusingly this gave the illusion of actually working for a moment. Namely when I
 
 ## Why does this work and why does it stop working?
 
-That is the question, well my theory is that there's a symmetry from 0-1 that makes reflecting all values x/y over the value 1/2 makes them into (y-x)/y due to the way this sequence is generated. The reason it doesn't work for values that don't add up to 1 is that there's no equivalent symmetry which causes problems due to the distribution of fractions not being uniform over the integers. This problem leaves us without even a way to salvage a good mechanism of having fractions from 0-1 which would've been useful in combination with method 2 if multiplication and division didn't cause issue.
+That is the question, well my theory is that there's a symmetry from 0-1 that makes reflecting all values x/y over the value 1/2 makes them into (y-x)/y due to the way this sequence is generated. The reason it doesn't work for values that don't add up to 1 is that there's no equivalent symmetry which causes problems due to the distribution of fractions not being uniform over the integers(aka going to and from integers with this system is non-linear). This problem leaves us without even a way to salvage a good mechanism of having fractions from 0-1 which would've been useful in combination with method 2 if multiplication and division didn't cause issue.
+
+## Oh wait solution 2 is fine actually
+
+yeah I didn't think about it hard enough originally, shift both numbers to the right by half the number of fraction bits before you do the equivalent integer operation and you're fine. That said it may make sense to only allocate a quarter of the number to the fraction(good enough for most cases) or if I were to actually implement this it'd be user specified(if people actually started using it then there'd probably be encoding problems but I'm not even going to make this so not my problem).
+
+## Conclusion
+
+The simplest solution is often terrible but the second simplest is generally at least okay. This also gives a new appreciation for how elegant floating point is(dodging the question of how many bits go to the precision completely). I also have a side quest on making a program to generate fractions for solution 3 which I intend to start writing about now.
