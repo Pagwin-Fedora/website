@@ -6,7 +6,7 @@ description: "In my last blog I wrote about my explorations on a new number type
 
 date: 2023-08-08
 
-draft: true 
+draft: false
 
 ---
 
