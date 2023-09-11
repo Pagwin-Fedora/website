@@ -21,8 +21,18 @@ Because I wanted to add comments. The way I'm planning on doing that will mean t
 ### Sounds like you've written a CMS so why is the static file hosting not a part of that?
 
 Because I'm not writing a CMS, I'm just writing the backend for comments and sticking some htmx stuff into the hugo template for a blog for the frontend.
-
+ 
 ## [Writing the Go backend]
+
+### Why Go?
+
+### Annoyances
+- Doesn't handle html multipart forms correctly(or the browser is wrong but I doubt that)
+- Magic redirect when there's no trailing /
+
+### Anyways
+
+- yeeted oauth midway through
 
 ## [Writing the Hugo templating frontend]
 
