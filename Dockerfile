@@ -4,9 +4,20 @@ RUN ["apk", "update"]
 RUN ["apk", "add hugo"]
 ADD . /root/
 WORKDIR /root
-ARG WITH_COMMENTS=0
+# pass in the uri or ip of the comments api so nginx can forward to it
+ARG COMMENTS_BACKEND
+ENV COMMENTS_BACKEND=${WITH_BACKEND}
 RUN ["hugo", "--minify"]
 
-FROM nginx:1.25
+FROM python:3.11-alpine as fiddling
+RUN ["adduser", "-h", "/application", "application"]
+# might need to chown these
+ADD ./scripts/template_convert.py /application/template_convert.py
+ADD ./nginx.conf.template /application/nginx.conf.template
+WORKDIR /application
+USER application
+RUN ["python", "/application/template_convert.py"]
 
+FROM nginx:1.25
+COPY --from=fiddling /application/nginx.conf
 RUN
