@@ -29,3 +29,8 @@ theme = "liquorice"
     [markup.goldmark]
         [markup.goldmark.renderer]
         unsafe = true
+
+[security]
+    [security.funcs]
+	# first 2 vars are things hugo has built in and I'm keeping to avoid breakage
+	getenv = ['^HUGO_', '^CI$', "COMMENTS_BACKEND"]
