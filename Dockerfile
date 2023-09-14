@@ -7,7 +7,7 @@ WORKDIR /root
 # pass in the uri or ip of the comments api so nginx can forward to it
 ARG COMMENTS_BACKEND
 ENV COMMENTS_BACKEND=${WITH_BACKEND}
-RUN ["hugo", "--minify"]
+RUN ["/usr/bin/hugo", "--minify"]
 
 FROM python:3.11-alpine as fiddling
 RUN ["mkdir", "/application"]
