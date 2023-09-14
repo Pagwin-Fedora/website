@@ -1,0 +1,6 @@
+
+    <noscript>
+        you need to enable javascript to view comments(or be a wizard)
+    </noscript>
+    {{ cond (not (eq (os.Getenv "COMMENTS_BACKEND") "")) (safeHTML (printf "<div hx-get='/comments/%s' hx-target='this' hx-trigger='load' hx-swap='outerHTML'></div>" .File.Path)) ""}}
+    
