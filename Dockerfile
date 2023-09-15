@@ -17,6 +17,8 @@ ADD ./scripts/template_convert.py /application/template_convert.py
 ADD ./nginx.conf.template /application/nginx.conf.template
 WORKDIR /application
 USER application
+ARG COMMENTS_BACKEND
+ENV COMMENTS_BACKEND=${COMMENTS_BACKEND}
 RUN ["python", "/application/template_convert.py"]
 
 FROM nginx:1.25-alpine

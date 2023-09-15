@@ -14,7 +14,7 @@ if back == None:
     buf = re.sub("###{---(.|\n)*###---}", "", buf)
 else:
     # ${{\s*$var_name\s*}}
-    buf = re.sub(rf"\${{{{\s*{var_name}\s*}}}}",var_name,buf)
+    buf = re.sub(rf"\${{{{\s*{var_name}\s*}}}}",back,buf)
 
 with open(file_name, "w+") as file:
     file.write(buf)
