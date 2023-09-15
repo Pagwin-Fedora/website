@@ -45,7 +45,7 @@ jobs:
           context: .
           push: true
           # https://github.com/docker/metadata-action#basic
-          tags: pagwin_fedora/website_frontend:latest
+          tags: pagwin-fedora/website_frontend:latest
           labels: ${{ steps.meta.outputs.labels }}
       - name: Build and push Docker image(yes comments)
         uses: docker/build-push-action@f2a1d5e99d037542a71f64918e516c093c6f3fc4
@@ -53,7 +53,7 @@ jobs:
           context: .
           push: true
           # https://github.com/docker/metadata-action#basic
-          tags: pagwin_fedora/website_frontend:latest-comments
+          tags: pagwin-fedora/website_frontend:latest-comments
           labels: ${{ steps.meta.outputs.labels }}
           build-args: COMMENTS_BACKEND=comments_backend
             #jobs:
