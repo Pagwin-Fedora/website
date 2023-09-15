@@ -45,9 +45,7 @@ jobs:
           context: .
           push: true
           # https://github.com/docker/metadata-action#basic
-          tags:
-            - user/website_frontend:latest
-            - user/website_frontend:{{steps.meta.outputs.sha}}
+          tags: user/website_frontend:latest , user/website_frontend:{{steps.meta.outputs.sha}}
           labels: ${{ steps.meta.outputs.labels }}
             #jobs:
             #  build:
