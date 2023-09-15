@@ -22,7 +22,7 @@ http {
 	###{---
 	location /comments {
 	    # we're going to use a python program to substitute this out
-	    proxy_pass http://${{COMMENTS_BACKEND}}
+	    proxy_pass http://${{COMMENTS_BACKEND}};
 	}
 	###---}
     }
