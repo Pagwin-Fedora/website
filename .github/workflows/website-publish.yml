@@ -55,8 +55,7 @@ jobs:
           # https://github.com/docker/metadata-action#basic
           tags: user/website_frontend:latest
           labels: ${{ steps.meta.outputs.labels }}
-          build-args:
-            - COMMENTS_BACKEND=comments_backend
+          build-args: COMMENTS_BACKEND=comments_backend
             #jobs:
             #  build:
             #    runs-on: ubuntu-latest
