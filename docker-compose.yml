@@ -2,10 +2,10 @@ version: "3"
 # copied from the docker-compose I wrote specifically for the comments backend which was made referencing the invidious docker compose file which was very helpful https://github.com/iv-org/invidious/blob/master/docker-compose.yml
 services:
   website:
-    image: ghcr.io/pagwin-fedora/website_frontend:latest-comments
+    image: ghcr.io/pagwin-fedora/website_frontend:latest
     restart: unless-stopped
     ports:
-      - "8080:80"
+      - "2020:80"
     depends_on:
       - comments_backend
   # need to specifically name it this unless you want to build the docker image in place

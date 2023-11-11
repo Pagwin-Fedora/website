@@ -9,8 +9,7 @@ back = os.environ.get(var_name)
 buf = str() 
 with open(file_name+".template") as file:
     buf = file.read()
-
-if back == None:
+if back == None or back == "":
     buf = re.sub("###{---(.|\n)*###---}", "", buf)
 else:
     # ${{\s*$var_name\s*}}
