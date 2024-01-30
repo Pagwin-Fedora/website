@@ -4,7 +4,7 @@ title: "Micro blogs (1)"
 
 description: "a bunch of thoughts ideas and what not that aren't worth of full blogs but that I still want to write down"
 
-date: 2024-1-30
+date: "2024-01-30"
 
 draft: false
 
