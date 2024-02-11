@@ -32,10 +32,12 @@ To restate though **DO NOT USE A CHATBOT WHILE LEARNING** you will learn more wi
 
 # Conclusion?
 
-Uuuuh well I just had a thought that there's a whole separate phenomenon of tutorials but I don't have enough experience to comment on that soooo yeah.
+Uuuuh well I just had a thought that there's a whole separate phenomenon of tutorials but I don't have enough experience to comment on that<sup><a href="#4">4</a></sup>  soooo yeah.
 
 <sup><a href="#1" name="1">1</a></sup> - What's obvious to me isn't obvious to everyone because I am weird.
 
 <sup><a href="#2" name="2">2</a></sup> - title: Learn you some Erlang for great good! a beginner's guide author: Fred Hébert isbn: 1-59327-435-1
 
 <sup><a href="#3" name="3">3</a></sup> - I'm aware of this use case due to one specific person you know who you are you Pythonic eldritch deity. ~~I'm not squeamish normally but an image of "Ehlers Danlos Syndrome" made me squirm noticably~~
+
+<sup><a href="#4" name="4">4</a></sup> - Really I don't have suffiecient understanding or experience to write this blog post either but I did anyways so oh well
