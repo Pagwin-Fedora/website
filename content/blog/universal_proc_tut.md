@@ -44,7 +44,7 @@ PROC helloProcedure (name) {
 helloProcedure("World")
 ```
 ## Lists
-lists are a methodology of storing multiple data values within a single variable. When you want to store or retrieve a value from a list you need to specify at what position in the list you want to retrieve the value from via a number with the indexing of that list commonly starting from 0 with certain very special languages which choose to start or allow the programmer to start lists from indices other than 0. When declaring a list in our pseudocode I'll use square brackets surrounded comma separated values of the list, the size of the list will not be set in stone for convenience but it should be noted that in most programming languages you need to be explicit when making a list larger. An example of creating and using a list is shown below
+lists are a methodology of storing multiple data values within a single variable<sup>[[4]](#4)</sup>. When you want to store or retrieve a value from a list you need to specify at what position in the list you want to retrieve the value from via a number with the indexing of that list commonly starting from 0 with certain very special languages which choose to start or allow the programmer to start lists from indices other than 0. When declaring a list in our pseudocode I'll use square brackets surrounded comma separated values of the list, the size of the list will not be set in stone for convenience but it should be noted that in most programming languages you need to be explicit when making a list larger. An example of creating and using a list is shown below
 ```
 someList <- ["First item", "Second item", "meh item"]
 someList[2] <- "Third item"
@@ -64,6 +64,9 @@ WHILE i < 50 {
 i <- 0
 WHILE i < 50 {
     DISPLAY(dataSet[i])
+    "if you saw this article prior to March 2024"
+    "I forgot to include the line below sorry about that."
+    i <- i + 1
 }
 FOREACH n <- dataSet {
     DISPLAY(n)
@@ -78,3 +81,5 @@ That should cover the basic syntax features someone trying to learn a procedural
 <a href="./#2" name="2">2</a> - most programming languages have certain specifications on what you can name your variables and there's also reccomended ways you should name your variables and both of these can vary per language so you should probably read their documentation for specifics but for my purposes I'm gonna stick to [camelCase](https://en.wikipedia.org/wiki/Camel_case) using only english letters as I'm unaware of any non-esoteric programing languages which disallow such naming
 
 <a href="./#3" name="3">3</a> - some programming languages will call foreach loops just for loops but most languages call them foreach loops
+
+<a href="./#4" name="4">4</a> - Hello pagwin from March 2024 here, I was reading this back and realized that it's more complicated than this and I forgot to mention that at the time. As you can see from the code below the 4 annotation oftentimes you can assign to elements of a list individually without needing to remake the entire list around it and assign the whole list to the variable again. A more accurate description is a list is a way to hold multiple buckets you can store values in within a single variable. Going beyond that involves talking about references and that's beyond this article's scope.
