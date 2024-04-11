@@ -4,7 +4,7 @@ title: "Rust Match and Enums"
 
 description: "A blog article I wrote to win a dumb argument"
 
-date: 2022-09-06
+date: "2022-09-06"
 
 draft: false
 

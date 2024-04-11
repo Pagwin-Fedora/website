@@ -39,4 +39,5 @@ I've never thought about this before but how long should I make blogs? How long 
 ## Footnotes
 
 <a href="./#1" name="1">1</a> - I started off in a fan-fic of the stormlight archive where a character I inserted into the story was putting up a bounty for themselves by promising "a shardblade in addition to any shardblades or shardplate $character has on them" rather than with money
+
 <a href="./#2" name="2">2</a> - If you noticed that the blog example was specific that's because this post was incited by a blog with whitespace which didn't shrink the whitespace when I zoomed. Also at time of writing I checked to make sure my site adheres to this.

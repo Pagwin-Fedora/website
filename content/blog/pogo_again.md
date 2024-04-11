@@ -1,10 +1,10 @@
 ---
 
-title: ""
+title: "Pogo again"
 
-description: "I swear I'm going to finish it this time"
+description: "I swear I'm going to finish it this time (I'd borked the format for this post in hugo previously so sorry if you noticed)"
 
-date: 2023-00-00
+date: 2023-01-01
 
 draft: true
 
