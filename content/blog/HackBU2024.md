@@ -6,7 +6,7 @@ description: "A summary of my experience, lessons and thoughts on the HackBU 202
 
 date: "2024-02-20"
 
-draft: true
+draft: false
 
 ---
 
