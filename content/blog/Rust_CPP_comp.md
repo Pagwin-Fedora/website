@@ -10,12 +10,24 @@ draft: true
 
 ---
 
-# What this is not
+# Less black and white than the hype suggests
 
-This is not me dunking in C++ because of memory safety (mostly). It also isn't unbiased I like Rust more than C++ for a couple of reasons.
+C++ is a flawed language but I think the hype around Rust obscures the ways in which it can be decent. So I want to write about that while also simping on Rust by pointing out that it makes doing this stuff the default meanwhile C++ at best has other options that for a noob are more obvious.
 
-# C++ is acceptable in some places
+## Move semantics, references and smart pointers
 
-It has references and it has a way of distinguishing between references which can change stuff and references that can't. It has smart pointers `std::unique_ptr` and `std::shared_ptr` (we'll come back to this) alongside RAII via destructors `~class_name`. It has declarative/functional ways of working with iterators via stuff in the algorithm header in particular `std::transform`, `std::copy_if` and `std::find`. This is all nice and if C++ didn't have it I would complain about it. Anyways onto complaining about C++ due to being spoiled by Rust.
+C++ has move semantics and references and you can use that to write code that performs similar things to what Rust does.
 
-# Complaints
+```cpp
+auto x = std::make_unique<std::int32_t>(3);
+// need to be explicit with std::move but still move semantics, if you know rust then unique_ptr is Box
+std::unique_ptr<std::int32_t> y = std::move(x);
+
+// this is an implicit call to a method, Rust would require that you use String::from
+std::string s = "hi";
+
+// without std::move this would copy over the contents of s which could be slow, Rust would do the move implicitly unless you called clone
+std::string s2 = std::move(s);
+```
+
+which considering all the pre-existing C++ code that can do stuff like this even if it was written before C++ had smart pointes, RAII or references.
